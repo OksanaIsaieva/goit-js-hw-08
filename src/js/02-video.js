@@ -18,16 +18,4 @@ const curentTime = localStorage.getItem("videoplayer-current-time") ?? 0;
     );
 
   
-    player.setCurrentTime(curentTime).then(function(seconds) {
-        
-    }).catch(function(error) {
-        switch (error.name) {
-            case 'RangeError':
-              
-                break;
-    
-            default:
-                
-                break;
-        }
-    });
+    player.setCurrentTime(curentTime || 0);
